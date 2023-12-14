@@ -1,9 +1,10 @@
-export {converirFormularioToJSON,convertiUrl}
-function converirFormularioToJSON(evento){
-    const fm=new FormData(evento.target);
+export {convertiUrl,convertirJSONtoHTML,converirFormularioToJSONForm};
+function converirFormularioToJSONForm(formulario){
+    const fm=new FormData(formulario);
     let json={};
     fm.forEach((value,key)=>(json[key]=value));
-    json['otra-e']=""+1
+    if(json['escuela2'].length>0)json['escuela']=json['escuela2'];
+    delete json['escuela2'];
     return json;
 }
 function convertiUrl(url){
@@ -13,4 +14,13 @@ function convertiUrl(url){
         if(url[i]=='/')break;
     }
     return url.substring(0, l);
+}
+function convertirJSONtoHTML(json){
+    let res="";
+    for(let obj in json){
+        if(typeof json[obj]=="string" && json[obj].length>0){
+            res+='<p class="font-weight-bold text-uppercase">'+obj+': '+(json[obj]=='on'?"Si":json[obj])+' </p>';
+        }
+    }
+    return res;
 }

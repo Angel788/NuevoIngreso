@@ -125,6 +125,7 @@
                                 <button  class="btn btn-danger text-uppercase" id="enviarFormulario"><i class="fa-solid fa-paper-plane"></i> Send</button>
                                 </div>
                                 <div id="form-enviar" style="display: none;">
+                                        <div id="res"></div>
                                         <h3>Deseas Continuar o Editar</h3>
                                         <button id="regresarFormulario" class="btn btn-primary text-uppercase"><i class="fa-solid fa-rotate-left"></i> Editar</button>
                                         <button  type="submit" class="btn btn-success text-uppercase"><i class="fa-solid fa-paper-plane"></i> Send</button>

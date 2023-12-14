@@ -1,5 +1,5 @@
 import { validadorFormularioRegistro} from "./modulos/Validadores.js";
-import { converirFormularioToJSON,convertiUrl } from "./modulos/ConvertirDatos.js";
+import {convertiUrl,convertirJSONtoHTML,converirFormularioToJSONForm } from "./modulos/ConvertirDatos.js";
 
 let formularioRegresar=document.getElementById("regresarFormulario");
 let formularioRegistrar=document.getElementById("Formulario-Registro");
@@ -9,8 +9,8 @@ let otraEscuela=document.getElementById("OtraEscuela");
 let otraDiscapacidadCheck=document.getElementById("otraDiscapacidadCheck");
 let otraDiscapacidadCampo=document.getElementById('otraDiscapacidadCampo');
 let formData=document.getElementById('form-data');
-let formEnviar=document.getElementById('form-enviar')
-
+let formEnviar=document.getElementById('form-enviar');
+let resForm=document.getElementById('res');
 
 checkOtra.checked=false;
 otraDiscapacidadCheck.checked=false;
@@ -22,6 +22,11 @@ formularioEnviar.addEventListener('click',(evento)=>{
         alert(res);
     }
     else{
+        let json=converirFormularioToJSONForm(formularioRegistrar);
+        console.log(json)
+        let jsontoHTML=convertirJSONtoHTML(json);
+        console.log(jsontoHTML);
+        resForm.innerHTML=jsontoHTML;
         formData.style.display="none";
         formEnviar.style.display="block";
     }
@@ -38,7 +43,7 @@ formularioRegistrar.addEventListener('submit',(evento)=>{
     let res=validadorFormularioRegistro(formularioRegistrar);
     if(res.length>0) alert(res);
     else{
-        let json=converirFormularioToJSON(evento);
+        let json=converirFormularioToJSONForm(formularioRegistrar);
         let location=convertiUrl(window.location.pathname);
         $.post(location+"/server/respuestaIngreso.php", json,
             function (data, textStatus) {
