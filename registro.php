@@ -65,38 +65,38 @@
                                     <h3><i class="fa-solid fa-globe"></i> Procedencia</h3>
                                     <div class="form-floating">
                                         <select name="estado" id="estado" class="form-select obd">
-                                        <option value="E1">Aguascalientes</option>
-                                        <option value="E2">Baja California</option>
-                                        <option value="E3">Baja California Sur</option>
-                                        <option value="E4">Campeche</option>
-                                        <option value="E5">Coahuila</option>
-                                        <option value="E6">Colima</option>
-                                        <option value="E7">Chiapas</option>
-                                        <option value="E8">Chihuahua</option>
-                                        <option value="E9">Ciudad de Mexico</option>
-                                        <option value="E10">Durango</option>
-                                        <option value="E11">Guanajuato</option>
-                                        <option value="E12">Guerrero</option>
-                                        <option value="E13">Hidalgo</option>
-                                        <option value="E14">Jalisco</option>
-                                        <option value="E15">Mexico</option>
-                                        <option value="E16">Michoan</option>
-                                        <option value="E17">Morelos</option>
-                                        <option value="E18">Nayarit</option>
-                                        <option value="E19">Nuevo Leon</option>
-                                        <option value="E20">Oaxaca</option>
-                                        <option value="E21">Puebla</option>
-                                        <option value="E22">Queretaro</option>
-                                        <option value="E23">Quintana Roo</option>
-                                        <option value="E24">San Luis Potosi</option>
-                                        <option value="E25">Sinaloa</option>
-                                        <option value="E26">Sonora</option>
-                                        <option value="E27">Tabasco</option>
-                                        <option value="E28">Tamalipas</option>
-                                        <option value="E29">Tlaxcala</option>
-                                        <option value="E30">Veracruz</option>
-                                        <option value="E31">Yucatan</option>
-                                        <option value="E32">Zacatecas</option>
+                                        <option value="Aguascalientes">Aguascalientes</option>
+                                        <option value="Baja California">Baja California</option>
+                                        <option value="Baja California Sur">Baja California Sur</option>
+                                        <option value="Campeche">Campeche</option>
+                                        <option value="Coahila">Coahuila</option>
+                                        <option value="Colima">Colima</option>
+                                        <option value="Chiapas">Chiapas</option>
+                                        <option value="Chihuahua">Chihuahua</option>
+                                        <option value="CDMX">Ciudad de Mexico</option>
+                                        <option value="Durango">Durango</option>
+                                        <option value="Guanajuato">Guanajuato</option>
+                                        <option value="Guerrero">Guerrero</option>
+                                        <option value="Hidalgo">Hidalgo</option>
+                                        <option value="Jalisco">Jalisco</option>
+                                        <option value="Mexico">Mexico</option>
+                                        <option value="Michoacan">Michoan</option>
+                                        <option value="Morelos">Morelos</option>
+                                        <option value="Nayarit">Nayarit</option>
+                                        <option value="Nuevo Leon">Nuevo Leon</option>
+                                        <option value="Oxaca">Oaxaca</option>
+                                        <option value="Puebla">Puebla</option>
+                                        <option value="Queretaro">Queretaro</option>
+                                        <option value="Quintana Roo">Quintana Roo</option>
+                                        <option value="San Luis Potosi">San Luis Potosi</option>
+                                        <option value="Sinaloa">Sinaloa</option>
+                                        <option value="Sonora">Sonora</option>
+                                        <option value="Tabasco">Tabasco</option>
+                                        <option value="Tamaulipas">Tamalipas</option>
+                                        <option value="Tlaxcala">Tlaxcala</option>
+                                        <option value="Veracruz">Veracruz</option>
+                                        <option value="Yucatan">Yucatan</option>
+                                        <option value="Zacatecas">Zacatecas</option>
                                         </select>
                                         <label for="nombre">Estado</label>
                                     </div>
@@ -153,7 +153,7 @@
                                     </div>
                                     <div class="">
                                         <label for="otraDiscapacidadCheck">Otra Discapacidad</label>
-                                        <input name="otraDiscapacidadC" placeholder="Discapacidad" type="checkbox" id="otraDiscapacidadCheck" class="form-check obd" require>
+                                        <input  placeholder="Discapacidad" type="checkbox" id="otraDiscapacidadCheck" class="form-check obd" require>
                                     </div>
                                     <div class="form-floating" id="otraDiscapacidadCampo" style="display: none;">
                                         <input type="text" name="otraDiscapacidad" id="" class="obd form-control" value="">
