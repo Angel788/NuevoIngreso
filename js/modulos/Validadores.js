@@ -1,4 +1,4 @@
-export {validadorFormularioRegistro,validorFormularioBusqueda};
+export {validadorFormularioRegistro,validorFormularioBusqueda,validorLogin};
 
 function validarDeBoletas(str){
     let pattern=/^(PM|PE)[0-9]{8}$/;
@@ -45,5 +45,12 @@ function validorFormularioBusqueda(formulario){
     let res="";
     if(validarCurp(formulario['curp'].value))res="Curp Invalido";
     return res;
+}
+function validorLogin(formulario){
+    let res="";
+    if(validarCorreo(formulario['correo'])) res=res+"Correo ";
+    if(validarNombre(formulario['contrasena'])) res=res+"Contraseña ";
+    if(res.length>0)res+=res+"Incorrectos";
+    return res
 }
 

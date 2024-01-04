@@ -1,4 +1,4 @@
-export {convertiUrl,convertirJSONtoHTML,converirFormularioToJSONForm};
+export {convertiUrl,convertirJSONtoHTML,converirFormularioToJSONForm,convertirFormularioToJson};
 function converirFormularioToJSONForm(formulario){
     const fm=new FormData(formulario);
     let json={};
@@ -23,4 +23,10 @@ function convertirJSONtoHTML(json){
         }
     }
     return res;
+}
+function convertirFormularioToJson(formulario){
+    const fm=new FormData(formulario);
+    let json={};
+    fm.forEach((value,key)=>(json[key]=value));
+    return json;
 }

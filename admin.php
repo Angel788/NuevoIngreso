@@ -1,3 +1,9 @@
+<?php
+  session_start();
+  if(isset($_SESSION['correo'])==0 || isset($_SESSION['contrasena'])==0){
+    header('location:login.php');
+  }
+?>
 <?php $titulo="Admin";?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,10 +16,12 @@
               <div class="container justify-content-center">
                     <div class="site-heading">
                             <h1>Admin</h1>
+                            <p><?php echo($_SESSION['nombre']) ?></p>
                     </div>
               </div>
         </header>
         <div class="container">
+        <button type="button" class="btn btn-danger" ><a href="server/cerrarSesion.php" class="link-light">Cerrar Sesión</a></button>
             <form action="" class="contactForm">
                 <div class="d-flex flex-row">
                     <div class="form-floating">

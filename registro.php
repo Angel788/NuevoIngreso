@@ -26,7 +26,7 @@
                             <form id="Formulario-Registro">
                                 <div id="form-data">
                                 <div class="block-form">
-                                    <h3><i class="fa-solid fa-id-card"></i> Indentidad</h3>
+                                <h3><i class="fa-solid fa-id-card"></i> Indentidad</h3>
                                 <div class="form-floating">
                                     <input type="text" placeholder="Nombre" type="text" id="nombre" name="nombre"class="form-control" require>
                                     <label for="nombre">Nombre</label>
@@ -47,6 +47,25 @@
                                     <label for="nombre">Curp</label>
                                     <div class="invalid-feedback" data-sb-feedback="curp">El curp es invalido.</div>
                                 </div>
+                                <h5>Genero: </h5>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" value="masculino" checked name="genero" placeholder="genero"   class="form-check-input" require>
+                                    <label for="genero" class="form-check-label">Masculino</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" value="femenino" name="genero" placeholder="genero"   class="form-check-input" require>
+                                    <label for="genero" class="form-check-label">Femenino</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" value="otro" name="genero" placeholder="genero"   class="form-check-input" require>
+                                    <label for="genero" class="form-check-label">Otro</label>
+                                </div>
+                                <div class="form-floating">
+                                    <input type="date" name="nacimiento" placeholder="Apellido"  id="curp" class="form-control" require>
+                                    <label for="nombre">Fecha De Nacimiento</label>
+                                    <div class="invalid-feedback" data-sb-feedback="curp">El curp es invalido.</div>
+                                </div>
+
                                 </div>
                                 <div class="block-form">
                                     <h3><i class="fa-solid fa-address-book"></i> Contacto</h3>
@@ -60,46 +79,78 @@
                                         <label for="nombre"><i class="fa-solid fa-phone"></i> Telefono</label>
                                         <div class="invalid-feedback" data-sb-feedback="curp">El telefono es invalido.</div>
                                     </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <div class="form-floating">
+                                                <select name="estado" id="estado" class="form-select obd">
+                                                    <option value="Aguascalientes">Aguascalientes</option>
+                                                    <option value="Baja California">Baja California</option>
+                                                    <option value="Baja California Sur">Baja California Sur</option>
+                                                    <option value="Campeche">Campeche</option>
+                                                    <option value="Coahila">Coahuila</option>
+                                                    <option value="Colima">Colima</option>
+                                                    <option value="Chiapas">Chiapas</option>
+                                                    <option value="Chihuahua">Chihuahua</option>
+                                                    <option value="CDMX">Ciudad de Mexico</option>
+                                                    <option value="Durango">Durango</option>
+                                                    <option value="Guanajuato">Guanajuato</option>
+                                                    <option value="Guerrero">Guerrero</option>
+                                                    <option value="Hidalgo">Hidalgo</option>
+                                                    <option value="Jalisco">Jalisco</option>
+                                                    <option value="Mexico">Mexico</option>
+                                                    <option value="Michoacan">Michoan</option>
+                                                    <option value="Morelos">Morelos</option>
+                                                    <option value="Nayarit">Nayarit</option>
+                                                    <option value="Nuevo Leon">Nuevo Leon</option>
+                                                    <option value="Oxaca">Oaxaca</option>
+                                                    <option value="Puebla">Puebla</option>
+                                                    <option value="Queretaro">Queretaro</option>
+                                                    <option value="Quintana Roo">Quintana Roo</option>
+                                                    <option value="San Luis Potosi">San Luis Potosi</option>
+                                                    <option value="Sinaloa">Sinaloa</option>
+                                                    <option value="Sonora">Sonora</option>
+                                                    <option value="Tabasco">Tabasco</option>
+                                                    <option value="Tamaulipas">Tamalipas</option>
+                                                    <option value="Tlaxcala">Tlaxcala</option>
+                                                    <option value="Veracruz">Veracruz</option>
+                                                    <option value="Yucatan">Yucatan</option>
+                                                    <option value="Zacatecas">Zacatecas</option>
+                                                </select>
+                                                <label for="nombre">Estado</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <div class="form-floating">
+                                                <input type="text" name="municipio" placeholder="Apellido" type="text" id="apellido" class="form-control" require>
+                                                <label for="nombre">Municipio o Alcadia</label>
+                                                <div class="invalid-feedback" data-sb-feedback="name:required">Apellido requerido.</div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <div class="form-floating">
+                                                <input type="text" name="calle" placeholder="Apellido" type="text" id="apellido" class="form-control" require>
+                                                <label for="nombre">Calle</label>
+                                                <div class="invalid-feedback" data-sb-feedback="name:required">Apellido requerido.</div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <div class="form-floating">
+                                                <input type="number" name="numeroLote" placeholder="Apellido" type="text" id="apellido" class="form-control" require>
+                                                <label for="nombre">Numero</label>
+                                                <div class="invalid-feedback" data-sb-feedback="name:required">Apellido requerido.</div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <div class="form-floating">
+                                                <input type="number" name="codigoPostal" placeholder="Apellido" type="text" id="apellido" class="form-control" require>
+                                                <label for="nombre">CodigoPostal</label>
+                                                <div class="invalid-feedback" data-sb-feedback="name:required">Apellido requerido.</div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="block-form">
                                     <h3><i class="fa-solid fa-globe"></i> Procedencia</h3>
-                                    <div class="form-floating">
-                                        <select name="estado" id="estado" class="form-select obd">
-                                        <option value="Aguascalientes">Aguascalientes</option>
-                                        <option value="Baja California">Baja California</option>
-                                        <option value="Baja California Sur">Baja California Sur</option>
-                                        <option value="Campeche">Campeche</option>
-                                        <option value="Coahila">Coahuila</option>
-                                        <option value="Colima">Colima</option>
-                                        <option value="Chiapas">Chiapas</option>
-                                        <option value="Chihuahua">Chihuahua</option>
-                                        <option value="CDMX">Ciudad de Mexico</option>
-                                        <option value="Durango">Durango</option>
-                                        <option value="Guanajuato">Guanajuato</option>
-                                        <option value="Guerrero">Guerrero</option>
-                                        <option value="Hidalgo">Hidalgo</option>
-                                        <option value="Jalisco">Jalisco</option>
-                                        <option value="Mexico">Mexico</option>
-                                        <option value="Michoacan">Michoan</option>
-                                        <option value="Morelos">Morelos</option>
-                                        <option value="Nayarit">Nayarit</option>
-                                        <option value="Nuevo Leon">Nuevo Leon</option>
-                                        <option value="Oxaca">Oaxaca</option>
-                                        <option value="Puebla">Puebla</option>
-                                        <option value="Queretaro">Queretaro</option>
-                                        <option value="Quintana Roo">Quintana Roo</option>
-                                        <option value="San Luis Potosi">San Luis Potosi</option>
-                                        <option value="Sinaloa">Sinaloa</option>
-                                        <option value="Sonora">Sonora</option>
-                                        <option value="Tabasco">Tabasco</option>
-                                        <option value="Tamaulipas">Tamalipas</option>
-                                        <option value="Tlaxcala">Tlaxcala</option>
-                                        <option value="Veracruz">Veracruz</option>
-                                        <option value="Yucatan">Yucatan</option>
-                                        <option value="Zacatecas">Zacatecas</option>
-                                        </select>
-                                        <label for="nombre">Estado</label>
-                                    </div>
                                     <div class="form-floating">
                                         <select name="escuela" id="escuela" class="form-select obd">
                                         <option value="Cet">CET Walter Cross Buchanan</option>
