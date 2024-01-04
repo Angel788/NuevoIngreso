@@ -11,7 +11,7 @@
         <?php include './assets/head.php'?>
     </head>
     <body>
-        <?php include './assets/menu.php'; ?>
+        <?php include './assets/menuAdmin.php'; ?>
         <header class="masthead" style="background-color: black; color:white">
               <div class="container justify-content-center">
                     <div class="site-heading">
@@ -21,7 +21,6 @@
               </div>
         </header>
         <div class="container">
-        <button type="button" class="btn btn-danger" ><a href="server/cerrarSesion.php" class="link-light">Cerrar Sesión</a></button>
             <form action="" class="contactForm">
                 <div class="d-flex flex-row">
                     <div class="form-floating">
