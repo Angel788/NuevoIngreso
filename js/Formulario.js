@@ -44,11 +44,12 @@ formularioRegistrar.addEventListener('submit',(evento)=>{
     if(res.length>0) alert(res);
     else{
         let json=converirFormularioToJSONForm(formularioRegistrar);
+        console.log(json);
         let location=convertiUrl(window.location.pathname);
         $.post(location+"/server/respuestaIngreso.php", json,
             function (data, textStatus) {
-                alert(data);
-                window.location.replace(location+"/index.php");   
+                if(data!="ok"){alert(data);}
+                else window.location.replace(location+"/index.php");   
             }
         ); 
     }

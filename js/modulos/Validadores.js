@@ -1,11 +1,11 @@
-export {validadorFormularioRegistro,validorFormularioBusqueda,validorLogin};
+export {validadorFormularioRegistro,validorFormularioBusqueda,validorLogin,validarCurp};
 
 function validarDeBoletas(str){
     let pattern=/^(PM|PE)[0-9]{8}$/;
     return str.length>0 && pattern.test(str);
 }
 function validarCurp(str){
-    let pattern=/^[A-Z]{4}[0-9]{6}[A-Z]{6}[A-Z|0-9]{2}$/;
+    let pattern=/[A-Z]{4}[0-9]{6}[A-Z]{6}([0-9]{2}|[A-Z][0-9])/g;
     return str.length>0 && pattern.test(str);
 }
 function validarNumero(str){
@@ -31,11 +31,17 @@ function validarPromedio(promedio){
 function validadorFormularioRegistro(formulario){
     let res="";
     if(validarNombre(formulario['nombre'].value)==0)res=res+"Nombre ";
-    if(validarApellido(formulario['apellido'].value)==0)res=res+"Apellido ";
+    if(validarNombre(formulario['apellidopaterno'].value)==0)res=res+"ApellidoPaterno ";
+    if(validarNombre(formulario['apellidomaterno'].value)==0)res=res+"ApellidoMaterno ";
+    if(validarNombre(formulario['nacimiento'].value)==0)res=res+"Nacimiento ";
+    if(validarNombre(formulario['municipio'].value)==0)res=res+"Municipio ";
+    if(validarNombre(formulario['calle'].value)==0)res=res+"Calle ";
+    if(validarNombre(formulario['numerolote'].value)==0)res=res+"NumeroLote ";
+    if(validarNombre(formulario['codigopostal'].value)==0)res=res+"CodigoPostal ";
     if(validarDeBoletas(formulario['boleta'].value)==0)res=res+"Boleta ";
     if(validarCurp(formulario['curp'].value)==0)res=res+"Curp ";
     if(validarCorreo(formulario['correo'].value)==0)res=res+"Correo ";
-    if(validarNumero(formulario['numero'].value)==0)res=res+"Numero ";
+    if(validarNumero(formulario['telefono'].value)==0)res=res+"Numero ";
     if(validarEscuela(formulario['escuela'].value)==0 || (formulario['otraEscuela'].checked && validarEscuela(formulario['escuela2'].value)==0))res=res+"Escuela ";
     if(validarPromedio(formulario['promedio'].value)==0)res=res+"Promedio ";
     if(res.length>0) res=res+"Incorrecto";

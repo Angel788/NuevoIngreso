@@ -21,10 +21,10 @@
               </div>
         </header>
         <div class="container">
-            <form action="" class="contactForm">
+            <form action="" class="contactForm" id='buqueda'>
                 <div class="d-flex flex-row">
                     <div class="form-floating">
-                        <input type="text" placeholder="Buscar" class="form-control">
+                        <input name="curp" type="text" placeholder="Buscar" class="form-control">
                         <label for=""><i class="fa-solid fa-magnifying-glass"></i> Buscar por CURP</label>
                     </div>
                     <button id="submitSearch"><i class="btn btn-success fa-solid fa-magnifying-glass"></i></button>
@@ -33,32 +33,13 @@
         </div>
         <main>
             <table class="table ">
-                <thead class="text-uppercase">
-                    <th>nombre</th>
-                    <th>Apellido</th>
-                    <th>Preboleta</th>
-                    <th>Curp</th>
-                    <th>Email</th>
-                    <th>Telefono</th>
-                    <th>Estado</th>
-                    <th>Escuela</th>
-                    <th>Promedio</th>
-                    <th>Horario</th>
+                <thead class="text-uppercase" id="admin-head">
                 </thead>
-                <tbody>
-                    <td><input type="text" > <button class="btn btn-danger">Modificar</button></td>
-                    <td><input type="text" > <button class="btn btn-danger">Modificar</button></td>
-                    <td><input type="text" > <button class="btn btn-danger">Modificar</button></td>
-                    <td><input type="text" > <button class="btn btn-danger">Modificar</button></td>
-                    <td><input type="text" > <button class="btn btn-danger">Modificar</button></td>
-                    <td><input type="text" > <button class="btn btn-danger">Modificar</button></td>
-                    <td><input type="text" > <button class="btn btn-danger">Modificar</button></td>
-                    <td><input type="text" > <button class="btn btn-danger">Modificar</button></td>
-                    <td><input type="text" > <button class="btn btn-danger">Modificar</button></td>
-                    <td><input type="text" > <button class="btn btn-danger">Modificar</button></td>
+                <tbody id="admin-table">
                 </tbody>
             </table>
         </main>
         <?php include './assets/footer.php'; ?>
+        <script type="module" src="js/Admin.js"></script>
     </body>
 </html>

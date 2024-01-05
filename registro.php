@@ -28,40 +28,45 @@
                                 <div class="block-form">
                                 <h3><i class="fa-solid fa-id-card"></i> Indentidad</h3>
                                 <div class="form-floating">
-                                    <input type="text" placeholder="Nombre" type="text" id="nombre" name="nombre"class="form-control" require>
-                                    <label for="nombre">Nombre</label>
+                                    <input type="text" placeholder="Nombre" type="text" id="nombre" name="nombre"class="form-control" required>
+                                    <label for="nombre">Nombre o Nombres</label>
                                     <div class="invalid-feedback" data-sb-feedback="name:required">Nombre requerido.</div>
                                 </div>
                                 <div class="form-floating">
-                                    <input type="text" name="apellido" placeholder="Apellido" type="text" id="apellido" class="form-control" require>
-                                    <label for="nombre">Apellido</label>
+                                    <input type="text" name="apellidopaterno" placeholder="Apellido" type="text" id="apellido" class="form-control" required>
+                                    <label for="nombre">Apellido Paterno</label>
                                     <div class="invalid-feedback" data-sb-feedback="name:required">Apellido requerido.</div>
                                 </div>
                                 <div class="form-floating">
-                                    <input type="text" name="boleta" placeholder="Preboleta" type="text" id="pm" class="form-control" require>
+                                    <input type="text" name="apellidomaterno" placeholder="Apellido" type="text" id="apellido" class="form-control" required>
+                                    <label for="nombre">Apellido Materno</label>
+                                    <div class="invalid-feedback" data-sb-feedback="name:required">Apellido requerido.</div>
+                                </div>
+                                <div class="form-floating">
+                                    <input type="text" name="boleta" placeholder="Preboleta" type="text" id="pm" class="form-control" required>
                                     <label for="nombre">Preboleta</label>
                                     <div class="invalid-feedback" data-sb-feedback="boleta">La boleta no es valida.</div>
                                 </div>
                                 <div class="form-floating">
-                                    <input type="text" name="curp" placeholder="Apellido"  id="curp" class="form-control" require>
+                                    <input type="text" name="curp" placeholder="Apellido"  id="curp" class="form-control">
                                     <label for="nombre">Curp</label>
                                     <div class="invalid-feedback" data-sb-feedback="curp">El curp es invalido.</div>
                                 </div>
                                 <h5>Genero: </h5>
                                 <div class="form-check form-check-inline">
-                                    <input type="radio" value="masculino" checked name="genero" placeholder="genero"   class="form-check-input" require>
+                                    <input type="radio" value="masculino" checked name="genero" placeholder="genero"   class="form-check-input" required>
                                     <label for="genero" class="form-check-label">Masculino</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input type="radio" value="femenino" name="genero" placeholder="genero"   class="form-check-input" require>
+                                    <input type="radio" value="femenino" name="genero" placeholder="genero"   class="form-check-input" required>
                                     <label for="genero" class="form-check-label">Femenino</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input type="radio" value="otro" name="genero" placeholder="genero"   class="form-check-input" require>
+                                    <input type="radio" value="otro" name="genero" placeholder="genero"   class="form-check-input" required>
                                     <label for="genero" class="form-check-label">Otro</label>
                                 </div>
                                 <div class="form-floating">
-                                    <input type="date" name="nacimiento" placeholder="Apellido"  id="curp" class="form-control" require>
+                                    <input type="date" name="nacimiento" placeholder="Apellido"  id="nac" class="form-control" required>
                                     <label for="nombre">Fecha De Nacimiento</label>
                                     <div class="invalid-feedback" data-sb-feedback="curp">El curp es invalido.</div>
                                 </div>
@@ -70,12 +75,12 @@
                                 <div class="block-form">
                                     <h3><i class="fa-solid fa-address-book"></i> Contacto</h3>
                                     <div class="form-floating">
-                                        <input name="correo" placeholder="Email" type="email" id="coreo" class="form-control" require>
+                                        <input name="correo" placeholder="Email" type="email" id="coreo" class="form-control" required>
                                         <label for="nombre"><i class="fa-solid fa-envelope"></i> Email</label>
                                         <div class="invalid-feedback" data-sb-feedback="curp">El correo es invalido.</div>
                                     </div>
                                     <div class="form-floating">
-                                        <input  placeholder="Telefono" name="numero" type="number" id="telefono" class="form-control" require>
+                                        <input  placeholder="Telefono" name="telefono" type="number" id="telefono" class="form-control" required>
                                         <label for="nombre"><i class="fa-solid fa-phone"></i> Telefono</label>
                                         <div class="invalid-feedback" data-sb-feedback="curp">El telefono es invalido.</div>
                                     </div>
@@ -121,28 +126,28 @@
                                         </div>
                                         <div class="form-group col-md-6">
                                             <div class="form-floating">
-                                                <input type="text" name="municipio" placeholder="Apellido" type="text" id="apellido" class="form-control" require>
+                                                <input type="text" name="municipio" placeholder="Apellido" type="text" id="municipio" class="form-control" required>
                                                 <label for="nombre">Municipio o Alcadia</label>
                                                 <div class="invalid-feedback" data-sb-feedback="name:required">Apellido requerido.</div>
                                             </div>
                                         </div>
                                         <div class="form-group col-md-6">
                                             <div class="form-floating">
-                                                <input type="text" name="calle" placeholder="Apellido" type="text" id="apellido" class="form-control" require>
+                                                <input type="text" name="calle" placeholder="Apellido" type="text" id="calle" class="form-control" required>
                                                 <label for="nombre">Calle</label>
                                                 <div class="invalid-feedback" data-sb-feedback="name:required">Apellido requerido.</div>
                                             </div>
                                         </div>
                                         <div class="form-group col-md-6">
                                             <div class="form-floating">
-                                                <input type="number" name="numeroLote" placeholder="Apellido" type="text" id="apellido" class="form-control" require>
+                                                <input type="number" name="numerolote" placeholder="Apellido" type="text" id="numerolote" class="form-control" required>
                                                 <label for="nombre">Numero</label>
                                                 <div class="invalid-feedback" data-sb-feedback="name:required">Apellido requerido.</div>
                                             </div>
                                         </div>
                                         <div class="form-group col-md-6">
                                             <div class="form-floating">
-                                                <input type="number" name="codigoPostal" placeholder="Apellido" type="text" id="apellido" class="form-control" require>
+                                                <input type="number" name="codigopostal" placeholder="Apellido" type="text" id="codigopostal" class="form-control" required>
                                                 <label for="nombre">CodigoPostal</label>
                                                 <div class="invalid-feedback" data-sb-feedback="name:required">Apellido requerido.</div>
                                             </div>
@@ -189,17 +194,17 @@
                                     <h3>Dificultades</h3>
                                     <div class="">
                                         <label for="otraDiscapacidadCheck">Discapacidad Motriz</label>
-                                        <input name="discapacidadMotriz" placeholder="Discapacidad" type="checkbox"  class="form-check obd" require>
+                                        <input name="discapacidadmotriz" placeholder="Discapacidad" type="checkbox"  class="form-check obd" require>
                                         <div class="invalid-feedback" data-sb-feedback="curp">El telefono es invalido.</div>
                                     </div>
                                     <div class="">
                                         <label for="otraDiscapacidadCheck">Discapacidad Auditiva</label>
-                                        <input name="discapacidadAuditiva" placeholder="Discapacidad" type="checkbox"  class="form-check obd" require>
+                                        <input name="discapacidadauditiva" placeholder="Discapacidad" type="checkbox"  class="form-check obd" require>
                                         <div class="invalid-feedback" data-sb-feedback="curp">El telefono es invalido.</div>
                                     </div>
                                     <div class="">
                                         <label for="otraDiscapacidadCheck">Discapacidad Visual</label>
-                                        <input name="discapacidadVisual" placeholder="Discapacidad" type="checkbox"  class="form-check obd" require>
+                                        <input name="discapacidadvisual" placeholder="Discapacidad" type="checkbox"  class="form-check obd" require>
                                         <div class="invalid-feedback" data-sb-feedback="curp">El telefono es invalido.</div>
                                     </div>
                                     <div class="">
@@ -207,7 +212,7 @@
                                         <input  placeholder="Discapacidad" type="checkbox" id="otraDiscapacidadCheck" class="form-check obd" require>
                                     </div>
                                     <div class="form-floating" id="otraDiscapacidadCampo" style="display: none;">
-                                        <input type="text" name="otraDiscapacidad" id="" class="obd form-control" value="">
+                                        <input type="text" name="otradiscapacidad" id="" class="obd form-control" value="">
                                         <label for="escuelas2"><i class="fa-solid fa-school"></i> Otra Escuela</label>
                                         <div class="invalid-feedback" data-sb-feedback="escuela">La escuela es invalida.</div>
                                     </div>
@@ -215,7 +220,7 @@
                                 <div class="form-block">
                                     <h3>Promedio</h3>
                                     <div class="form-floating">
-                                        <input name="promedio" placeholder="Promedio" type="number" id="promedio" class="form-control" require>
+                                        <input name="promedio" placeholder="Promedio" type="number" step="0.01" id="promedio" class="form-control" require>
                                         <label for="nombre"><i class="fa-solid fa-graduation-cap"></i> Promedio</label>
                                         <div class="invalid-feedback" data-sb-feedback="curp">El telefono es invalido.</div>
                                     </div>

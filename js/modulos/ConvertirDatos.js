@@ -1,4 +1,4 @@
-export {convertiUrl,convertirJSONtoHTML,converirFormularioToJSONForm,convertirFormularioToJson};
+export {convertiUrl,convertirJSONtoHTML,converirFormularioToJSONForm,convertirFormularioToJson,convertirJSONtoHTMLAdmin,convertirJSONtoHTMLAdminHead};
 function converirFormularioToJSONForm(formulario){
     const fm=new FormData(formulario);
     let json={};
@@ -29,4 +29,18 @@ function convertirFormularioToJson(formulario){
     let json={};
     fm.forEach((value,key)=>(json[key]=value));
     return json;
+}
+function convertirJSONtoHTMLAdmin(json,curp=0){
+    let res='<td><button class="btn btn-danger del" curp="'+curp+'">Eliminar</button></td>';
+    for(let obj in json){
+        if(obj!="id"){res+='<td><form class="form-edit"><input type="text" name="'+obj+'" curp="'+curp+'" value="'+json[obj]+'"> <button class="btn btn-danger">Modificar</button></form></td>';}
+    }
+    return res;
+}
+function convertirJSONtoHTMLAdminHead(json){
+    let res="<th>Eliminar</th>";
+    for(let obj in json){
+        if(obj!="id"){res+='<th>'+obj+'</th>';}
+    }
+    return res;
 }

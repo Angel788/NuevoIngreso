@@ -34,6 +34,7 @@
                 <thead>
                     <tr>
                         <th>Boleta</th>
+                        <th>Salon</th>
                         <th>CURP</th>
                         <th>Horario</th>
                         <th>Descargar Datos</th>
@@ -41,6 +42,7 @@
                 </thead>
                 <tbody>
                     <tr>
+                       <td>Blablabla</td>
                        <td>Blablabla</td>
                        <td>Blablabla</td>
                        <td>10:30-12:00</td>

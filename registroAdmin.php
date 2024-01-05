@@ -1,3 +1,9 @@
+<?php
+  session_start();
+  if(isset($_SESSION['correo'])==0 || isset($_SESSION['contrasena'])==0){
+    header('location:login.php');
+  }
+?>
 <?php $titulo="Registro";?>
 <!DOCTYPE html>
 <html lang="en">

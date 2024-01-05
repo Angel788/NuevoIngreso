@@ -13,6 +13,6 @@
         header($_POST['url']."/admin.php");
     }
     else{
-        echo 'No se pudo ingresar';
+        echo 'Correo o Contraseña invalida';
     }
 ?>
