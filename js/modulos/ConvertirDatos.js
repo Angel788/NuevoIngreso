@@ -1,4 +1,4 @@
-export {convertiUrl,convertirJSONtoHTML,converirFormularioToJSONForm,convertirFormularioToJson,convertirJSONtoHTMLAdmin,convertirJSONtoHTMLAdminHead};
+export {convertiUrl,convertirJSONtoHTML,converirFormularioToJSONForm,convertirFormularioToJson,convertirJSONtoHTMLAdmin,convertirJSONtoHTMLAdminHead,convertirJSONtoHTMLRecuperar};
 function converirFormularioToJSONForm(formulario){
     const fm=new FormData(formulario);
     let json={};
@@ -42,5 +42,19 @@ function convertirJSONtoHTMLAdminHead(json){
     for(let obj in json){
         if(obj!="id"){res+='<th>'+obj+'</th>';}
     }
+    return res;
+}
+function convertirJSONtoHTMLRecuperar(json) {
+    let salon=parseInt(json['cita']);
+    let horaInit=8*60+30+(salon/60)*60+(salon/60)*30;
+    let horaFinal=horaInit+90;
+    let horaInitP1=parseInt(horaInit/60),horaInitP2=horaInit%60;
+    let horaFinalP1=parseInt(horaFinal/60),horaFinalP2=horaFinal%60;
+    salon=(salon/20)%2+(2&((salon/20)))?3:1;
+    let res='<td name="curp" id="curp" value="'+json['curp']+'">'+json['curp']+'</td>'+
+    '<td name="boleta" id="boleta" value="'+json['boleta']+'">'+json['boleta']+'</td>'+
+    '<td name="salon" id="salon" value="'+salon+'">'+salon+'</td>'+
+    '<td name="horario" id="horario"value="'+horaInitP1+':'+((horaInitP2==0)?"00":""+horaInitP2)+'-'+horaFinalP1+':'+((horaFinalP2==0)?"00":""+horaFinalP2)+'">'+horaInitP1+':'+((horaInitP2==0)?"00":""+horaInitP2)+'-'+horaFinalP1+':'+((horaFinalP2==0)?"00":""+horaFinalP2)+'</td>';
+    console.log(res);
     return res;
 }

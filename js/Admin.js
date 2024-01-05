@@ -21,4 +21,4 @@ btns.addEventListener('click',(e)=>{
             }
         );
     }
-})
+});

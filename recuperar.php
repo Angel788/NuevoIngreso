@@ -19,13 +19,13 @@
             </div>
         </header>
         <div class="container">
-            <form action="" class="contactForm">
+            <form action="" class="contactForm" id='buqueda'>
                 <div class="d-flex flex-row">
                     <div class="form-floating">
-                        <input type="text" placeholder="Buscar" class="form-control">
+                        <input name="curp" type="text" placeholder="Buscar" class="form-control">
                         <label for=""><i class="fa-solid fa-magnifying-glass"></i> Buscar por CURP</label>
                     </div>
-                    <button id="submitSearch"><i class="btn btn-secondary fa-solid fa-magnifying-glass"></i></button>
+                    <button id="submitSearch"><i class="btn btn-success fa-solid fa-magnifying-glass"></i></button>
                 </div>
             </form>
         </div>
@@ -33,24 +33,24 @@
             <table class="table">
                 <thead>
                     <tr>
+                        <th>CURP</th>
                         <th>Boleta</th>
                         <th>Salon</th>
-                        <th>CURP</th>
                         <th>Horario</th>
-                        <th>Descargar Datos</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                       <td>Blablabla</td>
-                       <td>Blablabla</td>
-                       <td>Blablabla</td>
-                       <td>10:30-12:00</td>
-                       <td><button class="btn btn-success"><i class="fa-solid fa-download"></i> Descargar</button></td>
+                    <tr id="recuperar-table">
+                        <td>Blablabla</td>
+                        <td>Blablabla</td>
+                        <td>Blablabla</td>
+                        <td>10:30-12:00</td>
                     </tr>
                 </tbody>
             </table>
+            <button class="btn btn-success" id="btn-descarga"><i class="fa-solid fa-download"></i> Descargar</button>
         </main>
         <?php include './assets/footer.php'; ?>
+        <script type="module" src="js/Recuperar.js"></script>
     </body>
 </html>
