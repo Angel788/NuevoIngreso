@@ -25,6 +25,7 @@ function validarEscuela(escuela){
     return escuela.length>0;
 }
 function validadorCodigoPostal(codigopostal){
+    console.log(codigopostal.length>3);
     return codigopostal.length>3;
 }
 function validarPromedio(promedio){
@@ -46,7 +47,7 @@ function validadorFormularioRegistro(formulario){
     if(validarCorreo(formulario['correo'].value)==0)res=res+"Correo ";
     if(validarNumero(formulario['telefono'].value)==0)res=res+"Numero ";
     if(validarEscuela(formulario['escuela'].value)==0 || (formulario['otraEscuela'].checked && validarEscuela(formulario['escuela2'].value)==0))res=res+"Escuela ";
-    if(validadorCodigoPostal(formulario['codigopostal'].value))res=res+"Codigo Postal"; 
+    if(validadorCodigoPostal(formulario['codigopostal'].value)==0)res=res+"Codigo Postal "; 
     if(validarPromedio(formulario['promedio'].value)==0)res=res+"Promedio ";
     if(res.length>0) res=res+"Incorrecto";
     return res;

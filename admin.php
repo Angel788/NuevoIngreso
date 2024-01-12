@@ -51,6 +51,15 @@
                 </div>
             </form>
             <h2>Usuarios</h2>
+            <form action="" class="contactForm" id='buqueda-user'>
+                <div class="d-flex flex-row">
+                    <div class="form-floating">
+                        <input name="curp" type="text" placeholder="Buscar" class="form-control">
+                        <label for=""><i class="fa-solid fa-magnifying-glass"></i> Buscar por CURP</label>
+                    </div>
+                    <button id="buqueda-user-btn"><i class="btn btn-success fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </form>
             <table class="table">
                 <thead class="text-uppercase" id="admin-head"><tr><th>nombre</th><th>apellidopaterno</th><th>apellidomaterno</th><th>boleta</th><th>curp</th><th>genero</th><th>nacimiento</th><th>correo</th><th>telefono</th><th>estado</th><th>municipio</th><th>calle</th><th>numerolote</th><th>codigopostal</th><th>escuela</th><th>discapacidadmotriz</th><th>discapacidadauditiva</th><th>discapacidadvisual</th><th>otradiscapacidad</th><th>promedio</th><th>cita</th><th>Fecha</th></tr></thead>
                 <tbody id="users">

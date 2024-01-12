@@ -7,7 +7,11 @@ let adminhead=document.getElementById("admin-head");
 let del=document.getElementById("del");
 let buscarPDF=document.getElementById("buqueda-pdf-btn");
 let formPDF=document.getElementById("buqueda-pdf");
+let formBusquedaS=document.getElementById('buqueda-user');
+let formBusquedaSbtn=document.getElementById('buqueda-user-btn')
 var v=[];
+
+
 buscarPDF.addEventListener('click',(e)=>{
     e.preventDefault();
     if(formPDF['curp'].value.length>0){
@@ -41,6 +45,7 @@ buscarPDF.addEventListener('click',(e)=>{
 });
 btns.addEventListener('click',(e)=>{
     e.preventDefault();
+    let panel=document.getElementById('tabla-buscar');
     if(formBuscar['curp'].value.length>0){
         let json=convertirFormularioToJson(formBuscar);
         let location=convertiUrl(window.location.pathname);
@@ -50,16 +55,21 @@ btns.addEventListener('click',(e)=>{
                 res=JSON.parse(data);
                 console.log("Ye");
                 console.log(tabla);
-                if(res==null)alert("CURP INVALIDO");
+                if(res==null){
+                    alert("CURP INVALIDO");
+                    panel.setAttribute("style","display: none;");
+                }
                 else{
                     convertirJSONtoHTMLAdmin(res,res['curp'],tabla);
-                    let panel=document.getElementById('tabla-buscar');
                     panel.setAttribute("style","display: block;");
                 } 
             }
         );
     }
-    else alert("CURP VACIO");
+    else{
+        alert("CURP VACIO");
+        panel.setAttribute("style","display: none;");
+    }
 });
 formEditsFunctions();
 function formEditsFunctions(){
@@ -100,11 +110,40 @@ del.addEventListener("click",(e)=>{
         function (data, textStatus) {
             alert(data);
             let panel=document.getElementById('tabla-buscar');
-            panel.setAttribute("style","visibility: hidden;");
+            panel.setAttribute("style","display: none;");
             refrescarUsuarios();
         }
     );
 });
+formBusquedaSbtn.addEventListener('click',(e)=>{
+    e.preventDefault();
+    if(formBusquedaS['curp'].value.length>0){
+        let json=convertirFormularioToJson(formBusquedaS);
+        let location=convertiUrl(window.location.pathname);
+        let res={};
+        $.post(location+"/server/recuperarAlumnoSingle.php", json,
+            function (data, textStatus) {
+                console.log(data);
+                let tableUser=document.getElementById('users');
+                res=JSON.parse(data);
+                console.log("Ye");
+                console.log(tabla);
+                if(res['data'][0]==null){
+                    alert("CURP INVALIDO");
+                    refrescarUsuarios();
+                }
+                else{
+                    let html=rellenarUsuarios(res["data"]);
+                    tableUser.innerHTML=html;
+                } 
+            }
+        );
+    }
+    else{
+        alert("CURP VACIO");
+        refrescarUsuarios();
+    }
+})
 function refrescarUsuarios(){
     let tableUser=document.getElementById('users');
     let location=convertiUrl(window.location.pathname);
