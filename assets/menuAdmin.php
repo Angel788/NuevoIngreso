@@ -8,7 +8,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="admin.php"><i class="fa-solid fa-house"></i> Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="admin.php"><i class="fa-solid fa-user-tie"></i> Home Admin</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="registroAdmin.php">Registrar</a></li>
                         <li class="nav-item"><a href="server/cerrarSesion.php" class="nav-link px-lg-3 py-3 py-lg-4">Cerrar Sesión</a></li>
                     </ul>

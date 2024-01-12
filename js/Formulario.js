@@ -1,4 +1,4 @@
-import { validadorFormularioRegistro} from "./modulos/Validadores.js";
+import { validadorFormularioRegistro,isJson} from "./modulos/Validadores.js";
 import {convertiUrl,convertirJSONtoHTML,converirFormularioToJSONForm } from "./modulos/ConvertirDatos.js";
 
 let formularioRegresar=document.getElementById("regresarFormulario");
@@ -48,8 +48,24 @@ formularioRegistrar.addEventListener('submit',(evento)=>{
         let location=convertiUrl(window.location.pathname);
         $.post(location+"/server/respuestaIngreso.php", json,
             function (data, textStatus) {
-                if(data!="ok"){alert(data);}
-                else window.location.replace(location+"/index.php");   
+            if(isJson(data)==0){alert("NO SE HAN PODIDO GUARDAR CORRECTAMENTE");
+            alert(data);}
+                else{
+                    alert("TU DATOS HAN SIDO GUARDADOS CORRECTAMENTE");
+                    let json=JSON.parse(data);
+                    let curp=json['curp'];
+                    let salon=parseInt(json['cita']);
+                    let horaInit=8*60+30+(parseInt(salon/60))*60+(parseInt(salon/60))*30;
+                    let horaFinal=horaInit+90;
+                    let horaInitP1=parseInt(horaInit/60),horaInitP2=horaInit%60;
+                    let horaFinalP1=parseInt(horaFinal/60),horaFinalP2=horaFinal%60;
+                    salon=parseInt(salon/20)%2+(2&(parseInt(salon/20)))?3:1;
+                    let horaInitS=horaInitP1+":"+(horaInitP2==0?"00":horaInitP2);
+                    let horaFinS=horaFinalP1+":"+(horaFinalP2==0?"00":horaFinalP2);
+                    let com=horaInitS+"-"+horaFinS;
+                    window.location.replace(location+"/server/generarPDF.php?boleta="+json['boleta']
+    +"&curp="+json['curp']+"&salon="+salon+"&horario="+com);
+                }   
             }
         ); 
     }

@@ -49,10 +49,10 @@
                                 </div>
                                 <div class="form-floating">
                                     <input type="text" name="curp" placeholder="Apellido"  id="curp" class="form-control">
-                                    <label for="nombre">Curp</label>
-                                    <div class="invalid-feedback" data-sb-feedback="curp">El curp es invalido.</div>
+                                    <label for="nombre">CURP</label>
+                                    <div class="invalid-feedback" data-sb-feedback="curp">El CURP es invalido.</div>
                                 </div>
-                                <h5>Genero: </h5>
+                                <h5>Género: </h5>
                                 <div class="form-check form-check-inline">
                                     <input type="radio" value="masculino" checked name="genero" placeholder="genero"   class="form-check-input" required>
                                     <label for="genero" class="form-check-label">Masculino</label>
@@ -68,7 +68,7 @@
                                 <div class="form-floating">
                                     <input type="date" name="nacimiento" placeholder="Apellido"  id="nac" class="form-control" required>
                                     <label for="nombre">Fecha De Nacimiento</label>
-                                    <div class="invalid-feedback" data-sb-feedback="curp">El curp es invalido.</div>
+                                    <div class="invalid-feedback" data-sb-feedback="curp">El CURP es invalido.</div>
                                 </div>
 
                                 </div>
@@ -81,8 +81,8 @@
                                     </div>
                                     <div class="form-floating">
                                         <input  placeholder="Telefono" name="telefono" type="number" id="telefono" class="form-control" required>
-                                        <label for="nombre"><i class="fa-solid fa-phone"></i> Telefono</label>
-                                        <div class="invalid-feedback" data-sb-feedback="curp">El telefono es invalido.</div>
+                                        <label for="nombre"><i class="fa-solid fa-phone"></i> Teléfono</label>
+                                        <div class="invalid-feedback" data-sb-feedback="curp">El teléfono es invalido.</div>
                                     </div>
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
@@ -92,33 +92,33 @@
                                                     <option value="Baja California">Baja California</option>
                                                     <option value="Baja California Sur">Baja California Sur</option>
                                                     <option value="Campeche">Campeche</option>
-                                                    <option value="Coahila">Coahuila</option>
+                                                    <option value="Coahuila">Coahuila</option>
                                                     <option value="Colima">Colima</option>
                                                     <option value="Chiapas">Chiapas</option>
                                                     <option value="Chihuahua">Chihuahua</option>
-                                                    <option value="CDMX">Ciudad de Mexico</option>
+                                                    <option value="CDMX">Ciudad de México</option>
                                                     <option value="Durango">Durango</option>
                                                     <option value="Guanajuato">Guanajuato</option>
                                                     <option value="Guerrero">Guerrero</option>
                                                     <option value="Hidalgo">Hidalgo</option>
                                                     <option value="Jalisco">Jalisco</option>
-                                                    <option value="Mexico">Mexico</option>
-                                                    <option value="Michoacan">Michoan</option>
+                                                    <option value="Mexico">México</option>
+                                                    <option value="Michoacan">Michoacán</option>
                                                     <option value="Morelos">Morelos</option>
                                                     <option value="Nayarit">Nayarit</option>
-                                                    <option value="Nuevo Leon">Nuevo Leon</option>
-                                                    <option value="Oxaca">Oaxaca</option>
+                                                    <option value="Nuevo Leon">Nuevo León</option>
+                                                    <option value="Oaxaca">Oaxaca</option>
                                                     <option value="Puebla">Puebla</option>
-                                                    <option value="Queretaro">Queretaro</option>
+                                                    <option value="Queretaro">Querétaro</option>
                                                     <option value="Quintana Roo">Quintana Roo</option>
-                                                    <option value="San Luis Potosi">San Luis Potosi</option>
+                                                    <option value="San Luis Potosi">San Luis Potosí</option>
                                                     <option value="Sinaloa">Sinaloa</option>
                                                     <option value="Sonora">Sonora</option>
                                                     <option value="Tabasco">Tabasco</option>
-                                                    <option value="Tamaulipas">Tamalipas</option>
+                                                    <option value="Tamaulipas">Tamaulipas</option>
                                                     <option value="Tlaxcala">Tlaxcala</option>
                                                     <option value="Veracruz">Veracruz</option>
-                                                    <option value="Yucatan">Yucatan</option>
+                                                    <option value="Yucatan">Yucatán</option>
                                                     <option value="Zacatecas">Zacatecas</option>
                                                 </select>
                                                 <label for="nombre">Estado</label>
@@ -127,7 +127,7 @@
                                         <div class="form-group col-md-6">
                                             <div class="form-floating">
                                                 <input type="text" name="municipio" placeholder="Apellido" type="text" id="municipio" class="form-control" required>
-                                                <label for="nombre">Municipio o Alcadia</label>
+                                                <label for="nombre">Municipio o Alcadía</label>
                                                 <div class="invalid-feedback" data-sb-feedback="name:required">Apellido requerido.</div>
                                             </div>
                                         </div>
@@ -141,14 +141,14 @@
                                         <div class="form-group col-md-6">
                                             <div class="form-floating">
                                                 <input type="number" name="numerolote" placeholder="Apellido" type="text" id="numerolote" class="form-control" required>
-                                                <label for="nombre">Numero</label>
+                                                <label for="nombre">Número</label>
                                                 <div class="invalid-feedback" data-sb-feedback="name:required">Apellido requerido.</div>
                                             </div>
                                         </div>
                                         <div class="form-group col-md-6">
                                             <div class="form-floating">
                                                 <input type="number" name="codigopostal" placeholder="Apellido" type="text" id="codigopostal" class="form-control" required>
-                                                <label for="nombre">CodigoPostal</label>
+                                                <label for="nombre">Código Postal</label>
                                                 <div class="invalid-feedback" data-sb-feedback="name:required">Apellido requerido.</div>
                                             </div>
                                         </div>
@@ -158,23 +158,23 @@
                                     <h3><i class="fa-solid fa-globe"></i> Procedencia</h3>
                                     <div class="form-floating">
                                         <select name="escuela" id="escuela" class="form-select obd">
-                                        <option value="Cet">CET Walter Cross Buchanan</option>
-                                        <option value="Cecyt 1">Cecyt 1 Gonzalo Vazquez Vela</option>
-                                        <option value="Cecyt 2">Cecyt 2 Miguel Bernal</option>
-                                        <option value="Cecyt 3">Cecyt 3 Estanislao Ramirez Ruiz</option>
-                                        <option value="Cecyt 4">Cecyt 4 Lazaro Cardenas del Rio</option>
-                                        <option value="Cecyt 5">Cecyt 5 Benito Juarez Garcia</option>
-                                        <option value="Cecyt 6">Cecyt 6 Miguel Othon de Mendizabal</option>
-                                        <option value="Cecyt 7">Cecyt 7 Cuauhtémoc</option>
-                                        <option value="Cecyt 8">Cecyt 8 Narciso Vassols</option>
-                                        <option value="Cecyt 9">Cecyt 9 Juan de Dios Batiz</option>
-                                        <option value="Cecyt 10">Cecyt 10 Carlos Vallejo Marquez</option>
-                                        <option value="Cecyt 11">Cecyt 11 Wilfrido Massiu</option>
-                                        <option value="Cecyt 12">Cecyt 12 Jose Maria Morelos y Pavon</option>
-                                        <option value="Cecyt 13">Cecyt 13 Ricardo Flores Magon</option>
-                                        <option value="Cecyt 14">Cecyt 14 Luis Enrique Herro</option>
-                                        <option value="Cecyt 15">Cecyt 15 Diodoro Antonez</option>
-                                        <option value="Cecyt 19">Cecyt 19 Leona Vicario</option>
+                                            <option value="CET">CET Walter Cross Buchanan</option>
+                                            <option value="CECyT 1">CECyT 1 Gonzalo Vázquez Vela</option>
+                                            <option value="CECyT 2">CECyT 2 Miguel Bernal</option>
+                                            <option value="CECyT 3">CECyT 3 Estanislao Ramírez Ruiz</option>
+                                            <option value="CECyT 4">CECyT 4 Lázaro Cárdenas del Río</option>
+                                            <option value="CECyT 5">CECyT 5 Benito Juárez García</option>
+                                            <option value="CECyT 6">CECyT 6 Miguel Othón de Mendizábal</option>
+                                            <option value="CECyT 7">CECyT 7 Cuauhtémoc</option>
+                                            <option value="CECyT 8">CECyT 8 Narciso Bassols</option>
+                                            <option value="CECyT 9">CECyT 9 Juan de Dios Bátiz</option>
+                                            <option value="CECyT 10">CECyT 10 Carlos Vallejo Márquez</option>
+                                            <option value="CECyT 11">CECyT 11 Wilfrido Massiú</option>
+                                            <option value="CECyT 12">CECyT 12 José María Morelos y Pavón</option>
+                                            <option value="CECyT 13">CECyT 13 Ricardo Flores Magón</option>
+                                            <option value="CECyT 14">CECyT 14 Luis Enrique Erro</option>
+                                            <option value="CECyT 15">CECyT 15 Diodoro Antúnez</option>
+                                            <option value="CECyT 19">CECyT 19 Leona Vicario</option>
                                         </select>
                                         <label for="escuela"><i class="fa-solid fa-school"></i> Escuela</label>
                                         <div class="invalid-feedback" data-sb-feedback="escuela">La escuela es invalida.</div>
@@ -195,17 +195,17 @@
                                     <div class="">
                                         <label for="otraDiscapacidadCheck">Discapacidad Motriz</label>
                                         <input name="discapacidadmotriz" placeholder="Discapacidad" type="checkbox"  class="form-check obd" require>
-                                        <div class="invalid-feedback" data-sb-feedback="curp">El telefono es invalido.</div>
+                                        <div class="invalid-feedback" data-sb-feedback="curp">El teléfono es invalido.</div>
                                     </div>
                                     <div class="">
                                         <label for="otraDiscapacidadCheck">Discapacidad Auditiva</label>
                                         <input name="discapacidadauditiva" placeholder="Discapacidad" type="checkbox"  class="form-check obd" require>
-                                        <div class="invalid-feedback" data-sb-feedback="curp">El telefono es invalido.</div>
+                                        <div class="invalid-feedback" data-sb-feedback="curp">El teléfono es invalido.</div>
                                     </div>
                                     <div class="">
                                         <label for="otraDiscapacidadCheck">Discapacidad Visual</label>
                                         <input name="discapacidadvisual" placeholder="Discapacidad" type="checkbox"  class="form-check obd" require>
-                                        <div class="invalid-feedback" data-sb-feedback="curp">El telefono es invalido.</div>
+                                        <div class="invalid-feedback" data-sb-feedback="curp">El teléfono es invalido.</div>
                                     </div>
                                     <div class="">
                                         <label for="otraDiscapacidadCheck">Otra Discapacidad</label>
@@ -213,8 +213,8 @@
                                     </div>
                                     <div class="form-floating" id="otraDiscapacidadCampo" style="display: none;">
                                         <input type="text" name="otradiscapacidad" id="" class="obd form-control" value="">
-                                        <label for="escuelas2"><i class="fa-solid fa-school"></i> Otra Escuela</label>
-                                        <div class="invalid-feedback" data-sb-feedback="escuela">La escuela es invalida.</div>
+                                        <label for="escuelas2"><i class="fas fa-wheelchair"></i> Otra discapacidad</label>
+                                        <div class="invalid-feedback" data-sb-feedback="escuela">La discapacidad es invalida.</div>
                                     </div>
                                 </div>
                                 <div class="form-block">
@@ -222,7 +222,7 @@
                                     <div class="form-floating">
                                         <input name="promedio" placeholder="Promedio" type="number" step="0.01" id="promedio" class="form-control" require>
                                         <label for="nombre"><i class="fa-solid fa-graduation-cap"></i> Promedio</label>
-                                        <div class="invalid-feedback" data-sb-feedback="curp">El telefono es invalido.</div>
+                                        <div class="invalid-feedback" data-sb-feedback="curp">El teléfono es invalido.</div>
                                     </div>
                                 </div>
                                 <button  class="btn btn-danger text-uppercase" id="enviarFormulario"><i class="fa-solid fa-paper-plane"></i> Send</button>

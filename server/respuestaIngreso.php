@@ -1,9 +1,10 @@
 <?php
     $nombre=$_POST['nombre'];
     $database=new mysqli("localhost","root","","formulario");
-    $query_cita=$database->query("select cita.cita from cita where id=0;");
+    $query_cita=$database->query("select cita.cita,cita.fecha from cita where id=0;");
     $obj = $query_cita->fetch_array();
     $n_cita=$obj["cita"];
+    $fecha=$obj["fecha"];
     $discapacidad_m=0;
     $discapacidad_a=0;
     $discapacidad_v=0;
@@ -30,7 +31,8 @@
                     "discapacidadvisual,".
                     "otradiscapacidad,".
                     "promedio,".
-                    "cita) values('".
+                    "cita,".
+                    "fecha) values('".
                     $_POST['nombre']."','".
                     $_POST['apellidopaterno']."','".
                     $_POST['apellidomaterno']."','".
@@ -50,9 +52,19 @@
                     $discapacidad_a.",".
                     $discapacidad_v.",'".
                     $_POST['otradiscapacidad']."',".
-                    $_POST['promedio'].
-                    ",$n_cita);";
+                    $_POST['promedio'].",".
+                    $n_cita .",".
+                    $fecha.");";
     $query_ingreso=$database->query($query_subirCita);
-    $query_cita_u=$database->query("update cita set cita.cita='".($n_cita+1)."' where id=0;");
-    echo "ok";
+    if($n_cita==199){
+        $newdate = date("Y-m-d",strtotime ( '+1 day' , strtotime ( $fecha ) )) ;
+        $query_cita_u=$database->query("update cita set cita.cita='0', cita.fecha='$newdate' where id=0;");
+    }
+    else{
+        $query_cita_u=$database->query("update cita set cita.cita='".($n_cita+1)."' where id=0;");
+    }
+    $query=$database->query("select * from alumno where alumno.curp='".$_POST['curp']."';");
+    $arr=$query->fetch_object();
+    $json=json_encode($arr);
+    echo $json;
 ?>

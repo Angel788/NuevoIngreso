@@ -1,4 +1,4 @@
-import { validarCurp} from "./modulos/Validadores.js";
+import { validarCurp,isJson} from "./modulos/Validadores.js";
 import {convertiUrl,convertirFormularioToJson,convertirJSONtoHTMLRecuperar} from "./modulos/ConvertirDatos.js";
 let tabla=document.getElementById('recuperar-table');
 let btns=document.getElementById('submitSearch');
@@ -21,6 +21,7 @@ btns.addEventListener('click',(e)=>{
             }
         );
     }
+    else alert("CURP VACIO");
 });
 btnDescarga.addEventListener('click',(e)=>{
     e.preventDefault();

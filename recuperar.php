@@ -41,10 +41,6 @@
                 </thead>
                 <tbody>
                     <tr id="recuperar-table">
-                        <td>Blablabla</td>
-                        <td>Blablabla</td>
-                        <td>Blablabla</td>
-                        <td>10:30-12:00</td>
                     </tr>
                 </tbody>
             </table>
